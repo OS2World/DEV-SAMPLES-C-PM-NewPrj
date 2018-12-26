@@ -1,0 +1,49 @@
+DOCUMENTATION FOR NEWPRJ.EXE
+
+newprj was created by Anthony Andersen. Compuserve ID 72037,2474.
+I wrote this to simplify the tedious task of creating a new set of
+OS/2 PM project files. If it helps anyone else, I'm happy.
+
+You need an OS/2 toolkit (or SKD or SoftSet) and MS C 5.1 or higher to 
+compile the new project. I have tested it with versions 1.1 and 1.2.
+
+The source code and the executable file have been released into the 
+public domain. Any comments about newprj are welcome.
+
+newprj creates a new OS/2 PM project. It's a pretty simple program. You run 
+it by typing:
+
+	newprj projname
+
+where projname is the name of the new project. 
+
+newprj creates eight files: 
+	.MAK - MS MAKE file, 
+	.C   - C source file, 
+	.H   - C header file,
+	.LNK - linker command file, 
+	.DEF - linker definition file, 
+	.RC  - resource compiler file.
+	.ICO - icon file, and 
+	.DLG - resource compiler dialog file, 
+
+this is a listing of the files created by typing:
+
+	newprj slash
+
+SLASH    MAK      284   3-15-90   1:28a
+SLASH    C       5509   3-15-90   1:28a
+SLASH    DEF      159   3-15-90   1:28a
+SLASH    LNK       68   3-15-90   1:28a
+SLASH    H        684   3-15-90   1:28a
+SLASH    DLG      757   3-15-90   1:28a
+SLASH    ICO      288   3-15-90   1:28a
+SLASH    RC      1469   3-15-90   1:28a
+
+
+Once you've run newprj, you can compile the new project by typing:
+
+	make projname.mak
+
+This will create an EXE file which will run (although it really doesn't
+do anything). 
